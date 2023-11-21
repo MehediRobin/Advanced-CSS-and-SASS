@@ -27,6 +27,8 @@ body {
   position: absolute;
   top: 40px;
   left: 40px;
+  animation-name: moveLeft;
+  animation-duration: 3s;
 }
 
 .logo {
@@ -35,7 +37,7 @@ body {
 
 .center-header {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -43,6 +45,8 @@ body {
 .heading-primary {
   color: white;
   text-transform: uppercase;
+  position: relative;
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -50,6 +54,8 @@ body {
   font-size: 60px;
   font-weight: 400px;
   letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
 }
 
 .heading-primary-sub {
@@ -57,4 +63,116 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 3s;
+}
+
+.button {
+  width: 250px;
+  height: 60px;
+  display: block;
+  background-color: aliceblue;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  margin-top: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-weight: 700;
+  animation-name: moveUp;
+  animation-duration: 3s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) translateX(-50%);
+  }
+
+  80% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) translateX(-50%);
+  }
+}
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+
+  80% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
